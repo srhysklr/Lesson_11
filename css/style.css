@@ -1,0 +1,204 @@
+@font-face {
+	font-family: "Halloween";
+	src: url('../fonts/Halloween.woff') format('woff'), url('../fonts/Halloween.woff2') format('woff2');
+	font-display: swap;
+	font-weight: 400;
+	font-style: normal;
+}
+
+body {
+	font-family: "Halloween";
+	font-size: 20px;
+	letter-spacing: 1.5px;
+}
+
+.wrapper {
+	overflow: hidden;
+	position: relative;
+	min-height: 100%;
+}
+
+.header {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	padding: 15px;
+	background-color: #E58D2E;
+	z-index: 100;
+}
+
+.header__container {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.menu {
+	font-size: 0;
+}
+
+.menu__item {
+	display: inline-block;
+	position: relative;
+}
+
+.menu__link {
+	font-size: 16px;
+	display: inline-block;
+	padding: 5px 0px;
+}
+
+.menu__item:not(:last-child) {
+	margin-right: 50px;
+}
+
+.sub-menu {
+	background: linear-gradient(180deg, rgba(229,141,46,1) 0%, rgba(233,183,150,1) 100%);
+	padding: 15px;
+	position: absolute;
+	top: 150%;
+	left: 0;
+	min-width: 100%;
+	opacity: 0;					
+	visibility: hidden;
+	transition: all 0.3s ease 0s;
+	/* border-radius: 0 0 5px 5px; */
+}
+
+.menu__item:hover .sub-menu{
+	opacity: 1;
+	visibility: visible;
+	top: 100%;
+}
+
+.sub-menu__item {
+	text-align: center;
+}
+
+.sub-menu__item:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.sub-menu__link {
+	font-size: 16px;
+}
+
+.inner-menu {
+	background: linear-gradient(180deg, rgba(229,141,46,1) 0%, rgba(233,183,150,1) 100%);
+	padding: 15px;
+	position: absolute;
+	top: 29.5%;
+	left: 110%;
+	min-width: 110%;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease 0s;
+	/* border-radius: 0 5px 5px 0; */
+}
+
+.inner-menu__link {
+	font-size: 16px;
+	line-height: 0.9;
+}
+
+.inner-menu__item:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.sub-menu__item:hover .inner-menu {
+	opacity: 1;
+	visibility: visible;
+	left: 100%;
+}
+
+.main {
+	height: 100%;
+	background-color: #435173;
+}
+
+.main__bg-bottom {
+	position: absolute;
+	bottom:0;
+	left: 0;
+	width: 100%;
+	height: 15%;
+	background-color: #37425E;
+}
+
+/* .bg {
+	position: absolute;
+} */
+
+.bg__container {
+	position: relative;
+	max-width: 800px;
+	margin: 0 auto;
+	min-height: 100vh;
+}
+
+.bg__circle-1 {
+   position: absolute;
+	bottom: 350px;
+	left: 150px;
+	width: 500px;
+	height: 500px;
+	background: #49577dd9;
+	border-radius: 50%;
+}
+
+.bg__circle-2 {
+	position: absolute;
+	height:400px;
+   width: 400px;
+	bottom: 400px;
+	left: 200px;
+	background: #4e5c83d9;
+	border-radius: 50%;
+}
+
+.bg__circle-3 {
+	position: absolute;
+	height:300px;
+   width: 300px;
+	bottom: 450px;
+	left: 250px;
+	background: #FFFFFF url("../img/bg/moon-2.svg") 10px 10px / 70% no-repeat;
+	border-radius: 50%;
+}
+
+.bg__house {
+	position: absolute;
+	width: 600px;
+	height: 600px;
+	bottom: 100px;
+	left: 180px;
+	background: url("../img/bg/house-2.svg") 0 0 no-repeat;
+}
+
+.bg__bats {
+	position: absolute;
+	width: 500px;
+	height: 600px;
+	bottom: 180px;
+	left: 150px;
+	background: url("../img/bg/bats-2.svg") 0 0 no-repeat;
+}
+
+.bg__pumpkin-left {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	bottom: 80px;
+	left: 80px;
+	background: url("../img/bg/pumpkin.svg") 0 0 no-repeat;
+}
+
+.bg__pumpkin-right {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	bottom: 80px;
+	right: 90px;
+	background: url("../img/bg/pumpkin.svg") 0 0 no-repeat;
+}
+
